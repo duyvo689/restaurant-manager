@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="Nhà" />
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/ic_baseline_perm_phone_msg_24"
+            android:title="Đặt món" />
+        <item
+
+            android:id="@+id/nav_list_food"
+            android:icon="@drawable/food_icon"
+            android:title="Quản lý món ăn" />
+        <item
+
+            android:id="@+id/nav_list_danhthu"
+            android:icon="@drawable/money"
+            android:title="Quản lý hoá đơn" />
+
+
+    </group>
+
+    <item android:title="Thông tin">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/ic_person_black_24dp"
+                    android:title=" Quản lý thông tin" />
+
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Đăng xuất" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

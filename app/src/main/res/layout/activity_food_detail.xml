@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodDetail"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bgrroom"
+    tools:openDrawer="start">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_food_detail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/color_toolbar"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.andremion.counterfab.CounterFab
+            android:layout_marginStart="346dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/imageView2"
+            app:fabSize="mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shopping"
+            app:backgroundTint="#E1CF55"/>
+
+        <ImageView
+            android:id="@+id/img_food"
+            android:layout_width="0dp"
+            android:layout_height="256dp"
+            android:layout_marginTop="0dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar_food_detail"
+            app:srcCompat="@drawable/three" />
+
+        <TextView
+            android:fontFamily="@font/aclonica"
+
+            android:id="@+id/food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nasi Padang"
+            android:textColor="#C2DC52"
+            android:textSize="26sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_food" />
+
+        <RatingBar
+
+            android:progressTint="#F3DC0F"
+            android:progressBackgroundTint="@android:color/white"
+            android:id="@+id/ratingBar"
+            android:layout_width="239dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/food_name"
+            app:layout_constraintTop_toBottomOf="@+id/food_name" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="2.3"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+            app:layout_constraintStart_toEndOf="@+id/ratingBar"
+            app:layout_constraintTop_toTopOf="@+id/ratingBar" />
+
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/food_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/food_name"
+            app:srcCompat="@drawable/ic_like" />
+
+        <TextView
+            android:fontFamily="@font/aclonica"
+            android:id="@+id/food_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="199"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/aclonica"
+            android:lineSpacingExtra="2dp"
+            android:textSize="16sp"
+            android:text="Mọi người có thể tìm kiếm được các món ăn ngon của ẩm thực Việt và các nước khác; đánh giá, bình luận về các địa điểm ăn uống tại Việt Nam từ Home Food"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/food_price"
+            app:layout_constraintTop_toBottomOf="@+id/food_price" />
+
+        <Button
+            android:id="@+id/btnCart"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/add_to_cart_bg"
+            android:fontFamily="@font/aclonica"
+            android:text="THÊM MÓN"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/number_button"
+            app:initialNumber="1"
+            app:backGroundColor="#82E61E"
+            android:layout_marginTop="309dp"
+            android:layout_marginLeft="225dp"
+            />
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
